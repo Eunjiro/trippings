@@ -4,8 +4,14 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { MapPin, Calendar, Plus, Image as ImageIcon } from 'lucide-react'
+import { useUser } from '@clerk/nextjs'
 
 export default function DashboardPage() {
+  const { user, isLoaded } = useUser()
+
+  if (!isLoaded) return <div>Loading...</div>
+  if (!user) return <div>Please sign in.</div>
+  
   return (
     <div className="space-y-6">
       {/* Welcome */}
