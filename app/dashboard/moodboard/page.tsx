@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Plus, Tag } from 'lucide-react'
 
 export default function MoodPage() {
-  const [moodImages, setMoodImages] = useState([
+  const [moodImages] = useState([
     { id: 1, url: '/bali.jpg', tag: 'Beach' },
     { id: 2, url: '/switzerland.jpg', tag: 'Adventure' },
     { id: 3, url: '/tokyo.jpg', tag: 'City' },
