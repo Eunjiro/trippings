@@ -8,7 +8,6 @@ import {
   Briefcase,
   PlusCircle,
   Palette,
-  Settings,
   Bell
 } from 'lucide-react'
 import { cn } from '../lib/utils'
