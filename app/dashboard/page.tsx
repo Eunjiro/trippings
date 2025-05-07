@@ -3,7 +3,8 @@
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { MapPin, Calendar, Plus, Image as ImageIcon } from 'lucide-react'
+import { MapPin, Calendar, Plus, ImageIcon } from 'lucide-react'
+import Image from 'next/image'
 import { useUser } from '@clerk/nextjs'
 
 export default function DashboardPage() {
@@ -51,19 +52,25 @@ export default function DashboardPage() {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-3 gap-2">
-            <img
+            <Image
               src="/bali.jpg"
               alt="Moodboard 1"
+              width={150} // Specify width
+              height={150} // Specify height
               className="aspect-square rounded-lg object-cover"
             />
-            <img
+            <Image
               src="/switzerland.jpg"
               alt="Moodboard 2"
+              width={150}
+              height={150}
               className="aspect-square rounded-lg object-cover"
             />
-            <img
+            <Image
               src="/tokyo.jpg"
               alt="Moodboard 3"
+              width={150}
+              height={150}
               className="aspect-square rounded-lg object-cover"
             />
           </div>
